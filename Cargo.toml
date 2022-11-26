@@ -12,3 +12,5 @@ js-sys = "0.3"
 gloo-file = "0.2"
 fits = { path="../fits" }
 tensor = { path="../tensor" }
+plotters = "0.3.4"
+plotters-canvas = "0.3.0"
