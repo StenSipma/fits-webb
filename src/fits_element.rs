@@ -50,10 +50,10 @@ pub fn fits_element(props: &Props) -> Html {
 
 fn view_keyword_table(kw: &Keyword) -> Html {
     match kw {
-        Keyword::Value(k, v, _c) => html!(<tr><td>{k}</td> <td>{v}</td></tr>),
+        Keyword::Value(k, v, c) => html!(<tr><td>{k}</td> <td title={c.to_string()}>{v}</td></tr>),
         Keyword::History(v) => html!(<tr><td>{"HISTORY"}</td> <td>{v}</td></tr>),
         Keyword::Comment(v) => html!(<tr><td>{"COMMENT"}</td> <td>{v}</td></tr>),
-        Keyword::Continue(k, v, _c) => html!(<tr><td>{k}</td> <td>{v}</td></tr>),
+        Keyword::Continue(k, v, c) => html!(<tr><td>{k}</td> <td title={c.to_string()}>{v}</td></tr>),
     }
 
 }
